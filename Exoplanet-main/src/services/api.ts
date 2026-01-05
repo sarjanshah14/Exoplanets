@@ -1,4 +1,5 @@
-const API_BASE_URL = 'http://127.0.0.1:8000/api';
+// API Configuration - Use environment variables for Vercel compatibility
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
 
 export interface PredictionInput {
   nasaConfidence?: number;
@@ -97,7 +98,6 @@ class ApiService {
         transit_duration: input.transitDuration,
         planet_radius: input.planetRadius,
         planet_temperature: input.planetTemperature,
-        // Detection flags and extended stellar/orbital params removed per requirements
       }),
     });
   }
@@ -112,3 +112,4 @@ class ApiService {
 }
 
 export const apiService = new ApiService();
+

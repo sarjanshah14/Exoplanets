@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Starfield } from './components/Starfield';
+// import { CosmicBackground } from './components/CosmicBackground';
 import { Dashboard } from './pages/Dashboard';
 import { Specifications } from './pages/Specifications';
 import { History } from './pages/History';
@@ -11,7 +12,8 @@ import { Learning } from './pages/Learning';
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white relative overflow-x-hidden">
+      <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+        {/* <CosmicBackground /> */}
         <Starfield />
         <div className="relative z-10">
           <Navbar />

@@ -47,7 +47,7 @@ export function History() {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `astrokit-predictions-${Date.now()}.csv`;
+    a.download = `Exoscope-predictions-${Date.now()}.csv`;
     a.click();
   };
 
